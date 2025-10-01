@@ -1,156 +1,521 @@
-<!DOCTYPE html>
-
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Anoohya Portfolio</title>
+  <meta content="Anoohya Alivelu Bhaskarla AI/ML and Data Engineering Portfolio" name="description">
+  <meta content="AI, Machine Learning, Data Engineer, RAG, LangGraph, Python, Oracle, ETL" name="keywords">
+
+  <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="index-page">
 
   <header id="header" class="header d-flex flex-column justify-content-center">
+
     <i class="header-toggle d-xl-none bi bi-list"></i>
+
     <nav id="navmenu" class="navmenu">
       <ul>
         <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
         <li><a href="#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
         <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
+        <li><a href="#projects"><i class="bi bi-journal-check navicon"></i><span>Projects</span></a></li> <!-- NEW LINK -->
         <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
       </ul>
     </nav>
+
   </header>
 
   <main class="main">
 
-```
-<!-- Hero Section -->
-<section id="hero" class="hero section light-background">
-  <img src="assets/img/hero-bg.jpg" alt="">
-  <div class="container" data-aos="zoom-out">
-    <div class="row justify-content-center">
-      <div class="col-lg-9">
-        <h2>Anoohya Alivelu Bhaskarla</h2>
-        <p>I'm <span class="typed" data-typed-items="AI & ML Researcher, Data Engineer, Software Developer">AI & ML Researcher</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
-        <div class="social-links">
-          <a href="#"><i class="bi bi-twitter-x"></i></a>
-          <a href="#"><i class="bi bi-facebook"></i></a>
-          <a href="#"><i class="bi bi-instagram"></i></a>
-          <a href="https://www.linkedin.com/in/anoohya-alivelu-bhaskarla/"><i class="bi bi-linkedin"></i></a>
-          <a href="/downloads/Anoohya_Resume.docx" class="btn btn-lg btn-outline-light btn-download mt-4" download>📄 Download Resume (DOCX)</a>
+    <style>
+      /* Custom styles for projects section */
+      .tech-tags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+          margin-top: 10px;
+      }
+      .tech-tag {
+          background: #e9e9e9;
+          color: #333;
+          padding: 4px 10px;
+          border-radius: 5px;
+          font-size: 0.8rem;
+          font-weight: 500;
+      }
+      .project-title {
+          font-size: 1.35rem;
+          font-weight: 700;
+          color: var(--heading-color, #1a1a1a);
+      }
+      /* Style adjustment for the contact form alert */
+      #successMessage {
+          text-align: center;
+          padding: 15px;
+          margin-top: 20px;
+          border-radius: 5px;
+          background-color: #d4edda;
+          color: #155724;
+          border: 1px solid #c3e6cb;
+      }
+
+    </style>
+
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section light-background">
+
+      <img src="assets/img/hero-bg.jpg" alt="">
+
+      <div class="container" data-aos="zoom-out">
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <h2>Anoohya Alivelu Bhaskarla</h2>
+            <p>I'm <span class="typed" data-typed-items="AI Engineer, Data Scientist, LLM Agent Developer, Data Engineer">Engineer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+            <div class="social-links">
+              <!-- Please update these links -->
+              <a href="https://x.com/AnoohyaAlivelu" target="_blank"><i class="bi bi-twitter-x"></i></a>
+              <a href="https://www.instagram.com/sheer_ecstasy_9/" target="_blank"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/anoohya-alivelu-bhaskarla/" target="_blank"><i class="bi bi-linkedin"></i></a>
+              
+              <a
+                  href="https://docs.google.com/document/d/1-3A7EGTo8Pzh00TkFht3xz8Cvndz5utR/export?format=docx"
+                  class="btn btn-lg btn-outline-light btn-download mt-4"
+                  download
+                  target="_blank"
+                  rel="noopener"
+              >
+                📄 Download Resume (DOCX)
+              </a>
+
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
 
-<!-- About Section -->
-<section id="about" class="about section">
-  <div class="container section-title" data-aos="fade-up">
-    <h2>About</h2>
-    <p>Dedicated MS Data Science student and AI/ML researcher with 3 years of industry experience in data engineering. Passionate about building Generative AI applications, RAG pipelines, predictive modeling, and multi-modal AI solutions to solve real-world problems.</p>
-  </div>
-</section>
+    </section><!-- /Hero Section -->
 
-<!-- Skills Section -->
-<section id="skills" class="section">
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Skills</h2>
-    <div class="skills-container">
-      <div class="skill">🐍 Python</div>
-      <div class="skill">SQL / PL/SQL</div>
-      <div class="skill">PySpark</div>
-      <div class="skill">MLflow</div>
-      <div class="skill">LangChain / LLaMA</div>
-      <div class="skill">RAG / Vector DBs</div>
-      <div class="skill">FastAPI / Flask</div>
-      <div class="skill">TensorFlow / Keras</div>
-      <div class="skill">CNN / U-Net</div>
-      <div class="skill">Power BI / Tableau</div>
-      <div class="skill">Git / CI/CD</div>
-    </div>
-  </div>
-</section>
+    <!-- About Section -->
+    <section id="about" class="about section">
+      
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About</h2>
+        <p>Motivated and results-driven professional with a strong passion for AI, Machine Learning, and Data Engineering, combining practical industry expertise with research-driven innovation. I bring 3 years of industry experience as a Data Engineer, delivering ETL/ELT pipelines, data platforms, and predictive models across healthcare, retail, banking, and logistics domains, along with 2 years of AI/ML research experience as a Research Assistant, building Generative AI applications, RAG pipelines, predictive modeling, and multi-modal AI solutions.
+        </p>
+      </div><!-- End Section Title -->
 
-<!-- Resume Section -->
-<section id="resume" class="resume section">
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Resume</h2>
-  </div>
-  <div class="resume-item">
-    <h4>Graduate Research Assistant - University of North Texas</h4>
-    <h5>Aug 2024 – Present</h5>
-    <ul>
-      <li>Optimized data pipelines for ChatGPT sentiment analysis and multi-modal AI workflows.</li>
-      <li>Built RAG pipelines and vector-based retrieval for real-time AI responses.</li>
-    </ul>
-  </div>
-  <div class="resume-item">
-    <h4>Associate Consultant - Wipro</h4>
-    <h5>Jun 2021 – Aug 2023</h5>
-    <ul>
-      <li>Designed SQL/PLSQL workflows and managed ETL/ELT pipelines from multiple sources.</li>
-      <li>Automated backend workflows with Python/Shell; optimized queries and database performance.</li>
-    </ul>
-  </div>
-  <div class="resume-item">
-    <h4>Software Developer Intern</h4>
-    <h5>Mar 2020 – Jun 2021</h5>
-    <ul>
-      <li>Analyzed COVID-19 datasets and developed predictive ML models.</li>
-      <li>Built dashboards and ensured data quality for healthcare analytics.</li>
-    </ul>
-  </div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-  <!-- Projects -->
-  <h3>Projects</h3>
-  <ul>
-    <li><strong>AI Autopilot for IT Automation:</strong> Built FastAPI microservice with LLM agents for IT automation. <em>Tech:</em> FastAPI, LangGraph, LLM Agent Engineering</li>
-    <li><strong>Multi-Modal Summarization:</strong> Context-aware summaries integrating text and visual data. <em>Tech:</em> Python, RAG, LangChain, Vector DBs</li>
-    <li><strong>Smart Tutor AI (STA):</strong> RAG-based AI tutor; improved student performance by 20%. <em>Tech:</em> Python, Scikit-learn, MLflow, Pandas, NLTK, TextBlob</li>
-    <li><strong>Brain Tumor Detection:</strong> CNN/U-Net pipeline for tumor segmentation and classification. <em>Tech:</em> Python, TensorFlow/Keras, OpenCV, CNN, U-Net</li>
-  </ul>
-</section>
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-4">
+            <img src="assets/img/profile-img.jpg" class="img-fluid" alt="Profile Image">
+          </div>
+          <div class="col-lg-8 content">
+            <h2>AI & Enterprise Architecture Specialist</h2>
+            <p>
+              Highly skilled professional specializing in the intersection of Artificial Intelligence, Machine Learning, and robust Enterprise Data Architecture.
+              My expertise covers the full lifecycle of data solutions, from designing optimized **PL/SQL** and **ETL** workflows in enterprise environments like Oracle/Siebel to building modern **LLM Agent systems** and **RAG pipelines** using frameworks like **LangGraph** and **FastAPI**.
+              I am committed to transforming complex data challenges into scalable, high-performance AI-driven business solutions.
+            </p>
+            <div class="row">
+                <div class="col-lg-6">
+                    <ul>
+                        <li><i class="bi bi-chevron-right"></i> <strong>Location:</strong> <span>Argyle, TX 76226</span></li>
+                        <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>(945) 289-4684</span></li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <ul>
+                        <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>bhaskarlaanoohya@gmail.com</span></li>
+                        <li><i class="bi bi-chevron-right"></i> <strong>LinkedIn:</strong> <span>[Insert Link]</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+          </div>
 
-<!-- Contact Section -->
-<section id="contact" class="contact section">
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Contact</h2>
-  </div>
-  <p>Email: anoohyaalivelubhaskarla@gmail.com | Phone: +1 945-289-4684 | Location: Dallas, TX</p>
-</section>
-```
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+    
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Technical Skills</h2>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row">
+          <div class="col-lg-12">
+            
+            <h5 class="mt-3">Programming & Data Science</h5>
+            <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">FastAPI</span>
+                <span class="tech-tag">Pandas</span>
+                <span class="tech-tag">NumPy</span>
+                <span class="tech-tag">Scikit-learn</span>
+                <span class="tech-tag">Matplotlib</span>
+                <span class="tech-tag">Seaborn</span>
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">PL/SQL</span>
+                <span class="tech-tag">MongoDB</span>
+            </div>
+
+            <h5 class="mt-3">AI, ML, & NLP Frameworks</h5>
+            <div class="tech-tags">
+                <span class="tech-tag">LLaMA</span>
+                <span class="tech-tag">LangChain</span>
+                <span class="tech-tag">LangGraph</span>
+                <span class="tech-tag">RAG</span>
+                <span class="tech-tag">Multi-modal AI</span>
+                <span class="tech-tag">Transformers (Hugging Face)</span>
+                <span class="tech-tag">spaCy</span>
+                <span class="tech-tag">NLTK</span>
+                <span class="tech-tag">TextBlob</span>
+            </div>
+
+            <h5 class="mt-3">Data, ETL, & Enterprise Tools</h5>
+            <div class="tech-tags">
+                <span class="tech-tag">Vector DBs (Chroma, FAISS)</span>
+                <span class="tech-tag">ETL & Backend Development</span>
+                <span class="tech-tag">Canvas LMS integration</span>
+                <span class="tech-tag">Oracle APEX</span>
+                <span class="tech-tag">Siebel CRM</span>
+                <span class="tech-tag">AWS (Glue, Redshift, SageMaker, Bedrock)</span>
+                <span class="tech-tag">Terraform</span>
+                <span class="tech-tag">CloudFormation</span>
+            </div>
+
+            <h5 class="mt-3">Development & Collaboration</h5>
+            <div class="tech-tags">
+                <span class="tech-tag">Git</span>
+                <span class="tech-tag">VS Code</span>
+                <span class="tech-tag">Pytest</span>
+                <span class="tech-tag">Docker</span>
+                <span class="tech-tag">Kubernetes (AKS)</span>
+                <span class="tech-tag">Agile (Slack, Trello)</span>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section><!-- /Skills Section -->
+
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Resume</h2>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Master of Science (MS) in Data Science</h4>
+              <h5>2023 – 2025 (Expected)</h5>
+              <p><em>University of North Texas, Denton, TX</em></p>
+            </div>
+            <div class="resume-item">
+              <h4>Bachelor of Technology in Electronics and Computer Engineering</h4>
+              <h5>2017 – 2021</h5>
+              <p><em>Kalasalingam Academy of Research and Education, Tamil Nadu, India</em></p>
+            </div>
+            
+            <h3 class="resume-title">Research Experience</h3>
+            <div class="resume-item">
+                <h4>Graduate Research Assistant – Predictive Modeling & AI</h4>
+                <h5>Jan 2024 – Present</h5>
+                <p><em>University Name</em></p>
+                <ul>
+                    <li>Spearheaded the development of structured **RAG pipelines** for metadata creation and vector-based retrieval, enabling real-time, context-aware AI responses.</li>
+                    <li>Applied **Multi-modal AI techniques** (textual and visual inputs) for enhanced summarization and deployed **agentic AI workflows** for IT automation and knowledge management.</li>
+                    <li>Executed large-scale data cleaning, feature scaling, and model training; developed pipelines for sentiment classification to analyze LLM response polarity.</li>
+                </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+                <h4>Associate Consultant - Wipro (Client: METRO AG)</h4>
+                <h5>Jun 2021 – Aug 2023</h5>
+                <p><em>Hybrid</em></p>
+                <ul>
+                    <li>Engineered and optimized high-volume SQL/PLSQL workflows for critical retail transactions and enterprise reporting, **reducing reporting latency by 30%**.</li>
+                    <li>Designed and managed robust **ETL/ELT pipelines**, reliably ingesting high-volume data from Oracle, FTP, and APIs using **Python** and Shell scripting.</li>
+                    <li>Implemented containerization and **CI/CD** pipelines with Docker, Kubernetes (AKS), and Jenkins for scalable, automated deployments.</li>
+                    <li>Established monitoring and logging infrastructure using CloudWatch and Grafana for pipeline health and drift detection.</li>
+                </ul>
+            </div>
+            <div class="resume-item">
+                <h4>Software Developer | Intern & Software Developer</h4>
+                <h5>Mar 2020 – Jun 2021</h5>
+                <p><em>Company Name</em></p>
+                <ul>
+                    <li>**Developed** and automated ETL/ELT workflows using **SQL** and **PySpark**, orchestrated via Control-M and Airflow.</li>
+                    <li>**Constructed** predictive ML models (regression, decision trees, random forest, XGBoost) for outbreak forecasting and patient risk analysis.</li>
+                    <li>Analyzed epidemiological and socio-economic datasets, delivering key insights through **Tableau** and **Power BI** dashboards.</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Resume Section -->
+
+    <!-- Projects Section -->
+    <section id="projects" class="portfolio section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Projects</h2>
+        <p>A selection of my personal and research projects in Generative AI, Data Engineering, and Predictive Modeling.</p>
+      </div>
+
+      <div class="container">
+        <div class="row gy-4">
+          
+          <!-- Project 1: AI Autopilot for IT Request Automation -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="resume-item">
+              <h4 class="project-title">AI Autopilot for IT Request Automation</h4>
+              <p>Developed a **FastAPI** microservice orchestrating multi-agent systems (**Coordinator, Diagnostic, Automation, Writer**) via **LangGraph** for IT request automation.</p>
+              <ul>
+                <li>Supported approval workflows, structured JSON/Markdown responses, and delivered comprehensive architecture diagrams and API collections.</li>
+              </ul>
+              <div class="tech-tags">
+                <span class="tech-tag">FastAPI</span>
+                <span class="tech-tag">LangGraph</span>
+                <span class="tech-tag">LLM Agent Engineering</span>
+                <span class="tech-tag">API Design</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Smart Tutor AI (STA) -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="resume-item">
+              <h4 class="project-title">Smart Tutor AI (STA) – Intelligent Tutoring System</h4>
+              <p>Built a modular **RAG-based AI tutor** using LlamaIndex and **Chroma DB** integration with Canvas LMS pipelines, leading to a **20%** improvement in student performance prediction accuracy.</p>
+              <ul>
+                <li>Designed a systematic evaluation framework for ChatGPT sentiment consistency.</li>
+              </ul>
+              <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Scikit-learn</span>
+                <span class="tech-tag">MLflow</span>
+                <span class="tech-tag">RAG</span>
+                <span class="tech-tag">Pandas</span>
+                <span class="tech-tag">NLTK</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Multi-Modal Summarization -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="resume-item">
+              <h4 class="project-title">Multi-Modal Summarization for Scientific Papers</h4>
+              <p>Integrated textual and visual data for contextually accurate scientific paper summaries, addressing research questions on summary quality and informativeness.</p>
+              <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">RAG</span>
+                <span class="tech-tag">LangChain</span>
+                <span class="tech-tag">Vector Storage</span>
+                <span class="tech-tag">Parsing</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Brain Tumor Detection -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="resume-item">
+              <h4 class="project-title">Brain Tumor Detection using CNN & U-Net</h4>
+              <p>Engineered a medical imaging pipeline for tumor segmentation and classification using **CNN** and **U-Net** models on preprocessed MRI images.</p>
+              <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">TensorFlow/Keras</span>
+                <span class="tech-tag">OpenCV</span>
+                <span class="tech-tag">CNN</span>
+                <span class="tech-tag">U-Net</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- /Projects Section -->
+    
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4">
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-geo-alt flex-shrink-0"></i>
+              <div>
+                <h3>Location</h3>
+                <p>Argyle, TX 76226 (Dallas Area)</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3>Contact</h3>
+                <p>+1 (945) 289-4684</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>Email Address</h3>
+                <p>bhaskarlaanoohya@gmail.com</p>
+              </div>
+            </div><!-- End Info Item -->
+
+          </div>
+          <h2 style="text-align: center; margin-bottom: 20px;">For Queries</h2>
+
+          <form id="contactForm" class="col-lg-8">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" class="form-control" required>
+          
+            <label for="email" class="mt-3">Email</label>
+            <input type="email" id="email" name="email" class="form-control" required>
+          
+            <label for="message" class="mt-3">Message</label>
+            <textarea id="message" name="message" rows="5" class="form-control" required></textarea>
+          
+            <button type="submit" class="btn btn-primary mt-4">Send Message</button>
+          </form>
+          
+          <div id="successMessage" style="display: none;">
+            Your message has been sent successfully! Redirecting...
+          </div>
+          
+          <script>
+            // NOTE: This form uses a placeholder Formspree endpoint. You must update this URL 
+            // to your actual Formspree endpoint or server-side handler for the form to work.
+            document.getElementById("contactForm").addEventListener("submit", function (event) {
+              event.preventDefault(); // Prevent default form submission
+          
+              const formData = new FormData(this);
+              
+              const submitButton = this.querySelector('button[type="submit"]');
+              submitButton.textContent = 'Sending...';
+              submitButton.disabled = true;
+
+              // Placeholder URL - REPLACE THIS WITH YOUR ACTUAL FORM SUBMISSION ENDPOINT
+              const formspreeUrl = "https://formspree.io/f/mwpvbwkq"; 
+              
+              fetch(formspreeUrl, {
+                method: "POST",
+                body: formData,
+                headers: { "Accept": "application/json" } // Ensures proper JSON response
+              })
+              .then(response => response.json()) // Parse the JSON response
+              .then(data => {
+                if (data.ok) {
+                  document.getElementById("successMessage").style.display = "block";
+                  
+                  // Redirect after 2 seconds
+                  setTimeout(() => {
+                    // window.location.href = "/thank-you.html"; // Uncomment and change to your desired thank-you page
+                    submitButton.textContent = 'Message Sent!';
+                  }, 2000);
+                } else {
+                  alert("Something went wrong. Please try again.");
+                  submitButton.textContent = 'Send Message';
+                  submitButton.disabled = false;
+                }
+              })
+              .catch(error => {
+                console.error("Error:", error);
+                alert("An error occurred while submitting the form. Please try again.");
+                submitButton.textContent = 'Send Message';
+                submitButton.disabled = false;
+              });
+            });
+          </script>
+          
+          
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
 
   </main>
 
-  <footer class="footer">
-    <div class="container text-center">
-      <p>© 2025 Anoohya Alivelu Bhaskarla | Made with ❤️</p>
-      <div class="social-links">
-        <a href="https://x.com/AnoohyaAlivelu"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://www.instagram.com/sheer_ecstasy_9/"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/anoohya-alivelu-bhaskarla/"><i class="bi bi-linkedin"></i></a>
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <h3 class="sitename">Anoohya Alivelu Bhaskarla</h3>
+      <p>Made with Love❤️.</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://x.com/AnoohyaAlivelu" target="_blank"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" target="_blank"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/sheer_ecstasy_9/" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/anoohya-alivelu-bhaskarla/" target="_blank"><i class="bi bi-linkedin"></i></a>
       </div>
     </div>
   </footer>
 
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-
   <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
+  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
 </body>
+
 </html>
